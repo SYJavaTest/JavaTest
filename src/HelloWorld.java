@@ -6,8 +6,9 @@ public class HelloWorld {
     public static void main (String[] args)
     {
         System.out.println("HelloWorld");
-        
+
         System.out.println("尚莹编辑");
+        System.out.println("瞎胡闹");
 
         //编译运行时该句可以实现简单的输入
 
