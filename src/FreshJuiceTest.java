@@ -27,6 +27,7 @@ public class FreshJuiceTest {
         System.out.print("采用枚举法，选择了");
         System.out.print(juice.size);
         System.out.println("果汁！");
+
         FreshJuice smalljuice = new FreshJuice();
         smalljuice.size = FreshJuice.FreshJuiceSize.SMALL;
         System.out.print("采用枚举法，选择了");
