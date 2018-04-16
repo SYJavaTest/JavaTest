@@ -7,6 +7,7 @@
  * 每个类都有一个默认的构造方法
  * 构造方法的名称必须与类同名
  * 一个类可以有多个构造方法
+ * 构造方法没有void返回值    public void Factoin(){}
  */
 public class Faction {
     //默认的构造方法

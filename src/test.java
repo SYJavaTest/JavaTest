@@ -3,7 +3,7 @@
  * 作者：尚莹
  * 文档用途：练习
  */
-
+/******************************************枚举法的运用********************************************
 class cap
 {
     enum capsize{大,小}
@@ -22,12 +22,15 @@ public class test {
         System.out.println("顾  客：O__O 。。。我要一" + juicesize.size + "杯！");
 
     }
+ }
+*/
 
-
-    /**
+    /**************************************8构造方法的运用******************************************8
      * 构造方法的练习
      *
      *
+public class test {
+
     public test (){
                                                                    //每一个类都有一个默认的构造方法
     }
@@ -47,8 +50,72 @@ public class test {
 
 
     }
+     }
      */
 
 
-}
+    /*******************************************方法的调用******************************************
+    public class test{
+        int age;
+        //构造方法的使用
+        public test(String name)
+        {
+            System.out.println("执行测试的名字是"+name);
+        }
+        //普通无返回值的方法
+        public void setage(int sage)
+        {
+            age = sage;
+        }
+        //普通有int返回的方法，需有return语句返回
+        public int getage(){
+            System.out.println("执行人员今年"+age+"岁");
+            return age;
+        }
+        public static void main(String[] args)
+        {
+            test tester= new test("shangying");
+            tester.setage(23);
+            tester.getage();
+            System.out.println(tester.age);
+        }
+    }
+     */
+   /**********枚举练习
+class Car{
+    enum cartype{text,bus,busway,train,plan}
+    cartype type;
+    }
+    public class test{
+        public static void main(String[] args)
+        {
+            Car car =new Car();
+            car.type = Car.cartype.bus;
+            System.out.println("用户选择的车类型是"+car.type);
+
+        }
+    }
+    */
+   /*******方法调用******
+   public class test{
+       String connect;
+       public test(String name){
+           System.out.println("调用构造方法，输出内容:"+name);
+       }
+       public void setTest(String detil){
+           connect =detil;
+       }
+       public void getTest(){
+           System.out.println("调用普通方法输出setTest方法输入的内容："+connect);
+       }
+       public static void main(String[] args){
+           test call = new test("尚莹");
+           call.setTest("fgjaljglsadjgfldjglsd");
+           call.getTest();
+       }
+
+
+   }
+    ***/
+
 

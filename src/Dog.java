@@ -12,10 +12,18 @@ public class Dog {
     int age;
     String breed;
     void barking()
-    {}
+    {
+        System.out.println("汪汪汪");
+
+    }
     void hungry()
     {}
     void sleeping()
     {}
+    public static void main(String[] args)
+    {
+        Dog dog = new Dog();
+        dog.barking();;
+    }
 
 }
