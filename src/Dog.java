@@ -7,7 +7,7 @@
  * 包含barking，hungry,sleeping三个方法
  * 创建人：尚莹
  */
-public class Dog {
+class Dog1 {
     String color;
     int age;
     String breed;
@@ -20,10 +20,15 @@ public class Dog {
     {}
     void sleeping()
     {}
-    public static void main(String[] args)
-    {
-        Dog dog = new Dog();
-        dog.barking();;
-    }
+
 
 }
+public class Dog{
+    public static void main(String[] args)
+    {
+        Dog1 dog = new Dog1();
+        dog.barking();
+    }
+}
+
+

@@ -1,3 +1,4 @@
+
 /**
  * Created by uccc on 2018/4/13.
  * 作者：尚莹
@@ -54,7 +55,7 @@ public class test {
      */
 
 
-    /*******************************************方法的调用******************************************
+    /*******************************************方法的调用********************************
     public class test{
         int age;
         //构造方法的使用
@@ -72,6 +73,7 @@ public class test {
             System.out.println("执行人员今年"+age+"岁");
             return age;
         }
+
         public static void main(String[] args)
         {
             test tester= new test("shangying");
@@ -80,7 +82,8 @@ public class test {
             System.out.println(tester.age);
         }
     }
-     */
+     **********/
+
    /**********枚举练习
 class Car{
     enum cartype{text,bus,busway,train,plan}
@@ -104,14 +107,16 @@ class Car{
        }
        public void setTest(String detil){
            connect =detil;
+           getTest();
        }
        public void getTest(){
            System.out.println("调用普通方法输出setTest方法输入的内容："+connect);
        }
        public static void main(String[] args){
-           test call = new test("尚莹");
-           call.setTest("fgjaljglsadjgfldjglsd");
-           call.getTest();
+          test people;
+          people = new test("shangying");   //test people = new test("shangying")
+          people.setTest("afajsdlgjsdalfjsdfljsdal");
+
        }
 
 
@@ -119,3 +124,52 @@ class Car{
     ***/
 
 
+   /*********************************************************************
+
+public class test{
+    public void pupAge(){
+        //定义的变量需要进行初始化
+        int age=0;
+        age = age + 7;
+        System.out.println("小狗的年龄是"+age);
+       }
+       public static void main(String [] args){
+        test a=new test();
+        a.pupAge();
+       }
+   }
+    *******/
+   /************************
+   public class test{
+       int age;
+       public void dogAge(int age){
+           this.age=age;
+           System.out.println("小狗年龄是："+age);
+       }
+       public static void main(String [] args){
+           test Dog=new test();
+           Dog.dogAge(5);
+       }
+   }
+    *****/
+   /***********************************************
+   public class test{
+       public String name;
+       private double salary;//私有变量，仅在该类中可见
+       public test(String empName){
+           this.name=empName;
+       }
+       public void setSalary(double salary){
+           this.salary=salary;
+       }
+       public void printEmp(){
+           System.out.println("姓名是："+name);
+           System.out.println("薪资是："+salary);
+       }
+       public static void main(String[] args){
+           test emp=new test("小小");
+           emp.setSalary(10000);
+           emp.printEmp();
+       }
+   }
+    **********/

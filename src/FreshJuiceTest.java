@@ -9,6 +9,8 @@
  * 创建人：尚莹
  * 创建时间：2018/4/13.
  */
+//一个源文件中只能有一个public类
+//源文件名称要跟public类名称相同
 class FreshJuice
 {
     enum FreshJuiceSize{SMALL,MEDIUM,LARGE}  //枚举FreshJuiceSize这个方法的值有这三个值
