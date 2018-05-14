@@ -173,3 +173,120 @@ public class test{
        }
    }
     **********/
+   /*******************************************
+
+   //静态变量i可以直接在main中调用，若i不为静态变量，则只能先创建对象后才可使用
+   class B{
+       static int i;
+      void  ac(int ci){
+           i=ci;
+       }
+   }
+   public class test {
+       public static void main(String[] args) {
+           B.i = 10;
+           B a = new B();
+           B b = new B();
+           System.out.println(B.i + "," + a.i + "," + b.i);
+           a.ac(5);
+           System.out.println(B.i + "," + a.i + "," + b.i);
+       }
+   }
+    ******************/
+   /****************************************静态变量和普通变量间的区别
+    *  //静态变量又称类变量，只有一块存储空间
+    *  //普通变量是没创建一个对象都创建一个存储空间，变量间互不干扰
+   public class test{
+       public static int a=0;
+       public int b=0;
+       public void cha(){
+           a++;
+           b++;
+           System.out.println(a+","+b);
+       }
+       public static void main(String[] args){
+           for(int k=0;k<6;k++){
+               test sta=new test();
+               sta.cha();
+           }
+       }
+
+   }
+    **************/
+
+   /**************************java修饰符*******************************/
+   //default(可缺省)在同一个包内可见
+   //private在同一个类中可见
+   //public对所有类可见
+   //protected对同一个包
+
+/***********************private修饰符***************
+//私有变量name在其他类中不允许访问，但是可以通过public定义的方法 Setname() Getname()去修改和返回name值
+class Siyou{
+    private String name;
+    String pname;
+    public void Setname(String sname){
+        this.name=sname;
+    }
+    public String Getname(){
+        return name;
+    }
+    public void Setpname(String sname){
+        this.pname=sname;
+    }
+}
+public class test{
+    public static void main(String[] args){
+        Siyou n=new Siyou();
+        n.Setname("String 类型返回值");
+        System.out.println("私有变量只能调用方法引用："+n.Getname());
+        n.Setpname("gongyou");
+        System.out.println("公有变量可以在外部直接引用："+n.pname);
+    }
+}
+ **********/
+
+/**************************练习********************
+public class test{
+    private static int numInstances=0;
+    protected static int getCount(){
+        return numInstances;
+    }
+    private static void addInstance(){
+        numInstances++;
+    }
+    public test(){
+        test.addInstance();
+    }
+    public static void main(String[] args){
+        System.out.println(test.numInstances);
+        System.out.println(test.getCount());
+        for(int i=0;i<500;++i){
+            new test();
+        }
+        System.out.println(test.numInstances);
+
+    }
+}
+
+ **************8888*/
+
+
+
+/*************************************
+//final变量只能初始化一次
+/*****************throws、throw****************************/
+public class test{
+public static void function() throws NumberFormatException{
+    String s="abc";
+    System.out.println(Double.parseDouble(s));
+        }
+        public static void main(String[] args) {
+            try {
+                function();
+            }catch (NumberFormatException e){
+                System.err.println("非数据类型不能转换");
+            }
+        }
+
+}

@@ -58,7 +58,8 @@ public class work_one {
             Scanner input = new Scanner(System.in);
             hand = input.nextInt();
             if(hand < 1 || hand > 3){
-                System.out.println("您输入的值不合法！");
+                System.out.println("您输入的值不合法！3秒后重新输入！");
+                Thread.sleep(3000);
                 Mora();
             }
             else{
