@@ -275,7 +275,7 @@ public class test{
 
 /*************************************
 //final变量只能初始化一次
-/*****************throws、throw****************************/
+/*****************throws、throw******************
 public class test{
 public static void function() throws NumberFormatException{
     String s="abc";
@@ -290,3 +290,197 @@ public static void function() throws NumberFormatException{
         }
 
 }
+ **********/
+/***************算术运算符**************
+public class test{
+    public static void main(String[] args){
+        int a=10,b=20,c=25,d=25;
+        System.out.println("给定变量:");
+        System.out.println("a:"+a);
+        System.out.println("b:"+b);
+        System.out.println("c:"+c);
+        System.out.println("d:"+d);
+        System.out.println("不同运算结果:");
+        System.out.println("a+b:"+(a+b));
+        System.out.println("a-b:"+(a-b));
+        System.out.println("a*b:"+(a*b));
+        System.out.println("a%b:"+(a%b));
+        System.out.println("a/b:"+(a/b));
+        System.out.println("a++:"+(a++));
+        System.out.println("当前a值："+a);
+        System.out.println("++a:"+(++a));
+
+
+    }
+}*****/
+
+/********************&&和||的运用***********
+public class test{
+    public static void main(String[] args){
+        boolean a=true,b=false;
+        System.out.println("a&&b:"+(a&&b));
+        System.out.println("a||b:"+(a||b));
+        System.out.println("!a:"+!a);
+
+    }
+}
+ *******/
+/*********************短路逻辑运算******
+ public class test{
+     public static void main(String[] args){
+         int a=5;
+         boolean b=(a<4)&&(++a>10);
+
+         System.out.println("当前a的值为："+a);
+
+     }
+}******/
+/*******************条件运算符（？：）**************
+public class test{
+    public static void main(String[] args){
+        int a=5;
+        int b;
+        //判断a是否等于1，若等于则b=10，否则等于20
+        b=(a==1)?10:20;
+        System.out.println("输入b的值为："+b);
+        b=(a==5)?10:20;
+        System.out.println("输入b的值为："+b);
+
+    }
+}*********/
+/*************8检查对象是否是某个特定类型************
+public class test{
+    public static void main(String[] args){
+        String  a="3";
+        boolean result;
+        result=a instanceof String;
+    }
+}
+ ********/
+/*******************while循环********
+public class test{
+    public static void main(String[] args){
+        int a=10,i=0;
+        while (a<20){
+            a++;
+            i++;
+            System.out.println("第"+i+"次循环，此时a的值为："+a);
+        }
+    }
+}
+ ***********/
+
+import java.util.Scanner;
+
+/*********************石头与宝石***********
+class numJewelsInStones{
+    public int numJeweLsInStones(int[] J,int[] S){
+        int Jlen,Slen,a=0;
+        Jlen=J.length;
+        Slen=S.length;
+        for (int i=0;i<Jlen;i++){
+                for(int j=0;j<Slen;j++){
+                    if(J[i]==S[j]){
+                        a++;
+                    }
+                }
+        }
+        return a;
+
+    }
+}
+public class test{
+    public static void main(String[] args){
+        int[] j={'s','d','f','a','b'};
+        int[] t={'s','d'};
+
+        numJewelsInStones a= new numJewelsInStones();
+        System.out.println("宝石有"+a.numJeweLsInStones(j,t)+"个");
+    }
+}
+
+ **************/
+
+/************************test*****************************************************88
+class ston{
+    public  ston(int[] J,int[] S){
+        int num=0;
+        for(int i=0;i<J.length;i++){
+            for(int j=0;j<S.length;j++){
+                if(J[i]==S[j]){
+                    num++;
+                }
+            }
+        }
+        System.out.println("石头中有"+num+"个宝石！");
+    }
+}
+public class test{
+    public static void main(String[] args){
+        int[] j={'b','a'};
+        int[] t={'a','A','A','b','b','b','b'};
+        System.out.println("********************宝石与石头********************");
+        System.out.print("宝石类型有：");
+        for(int x:j){
+            System.out.print(x);
+            System.out.print(",");
+        }
+        System.out.println("");
+        System.out.print("石头类型有：");
+        for(int x:t){
+            System.out.print(x);
+            System.out.print(",");
+        }
+        System.out.println("");
+        ston n=new ston(j,t);
+    }
+}
+ ************************/
+//  int [] j={'a','b'}
+//   for(int x: j){System.out.println(x)}
+//   循环输出数组j中的内容
+
+
+/**********************************循环*****************************************/
+//break;语句用来跳出整个语句块，跳出最里层的循环，并继续执行该循环下的语句
+//continue让程序立即跳转到更新语句，进入下一次循环的迭代
+    /****************brake语句的运用
+public class test{
+    public static void main(String[] args){
+        for(int i=0;i<30;i++){
+            for(int j=0;j<30;j++){
+                if(i==j){
+                    break;
+                }else{
+                    System.out.println(i+","+j);
+                }
+            }
+        }
+    }
+}*****************/
+/***********************continue*****************
+public class test{
+    public static void main(String[] args){
+        for(int i=0;i<30;i++){
+            for(int j=0;j<30;j++){
+                if(i==j){
+                    continue;
+                }else{
+                    System.out.println(i+","+j);
+                }
+            }
+        }
+    }
+}
+ ******/
+/************************九九乘法表*****************
+public class test{
+    public static void main(String[] args){
+        for(int i=1;i<=9;i++){
+            for(int j=1;j<=i;j++){
+               System.out.print(i+"*"+j+"="+i*j+"  ");
+            }
+            System.out.println();
+        }
+    }
+}********/
