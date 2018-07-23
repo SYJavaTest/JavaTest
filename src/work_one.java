@@ -49,7 +49,7 @@ public class work_one {
     }
     public static void Mora(){
         int hand;
-        int x=(int)(1+Math.random()*3);//随机数的范围在1-3区间内
+        int x=1+(int)(Math.random()*3);//随机数的范围在1-3区间内
         String hand1="剪刀",hand2="石头",hand3="布";
         System.out.println("-----------猜拳游戏-----------");
         System.out.println("请出拳：1（剪刀）、2（石头）、3（布）");

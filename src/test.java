@@ -370,6 +370,8 @@ public class test{
 }
  ***********/
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /*********************石头与宝石***********
@@ -484,3 +486,248 @@ public class test{
         }
     }
 }********/
+/************************等腰三角形*****************
+public class test{
+    public static void main(String[] args){
+        int i,j,q;
+        for(i=1;i<6;i++){
+            for(j=5;j>i;j--){
+                System.out.print(" ");
+            }
+            for(q=1;q<i*2;q++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+
+
+
+    }
+}
+ **/
+/*************
+public class test{
+    public static void main(String[] args){
+        int i,p,q;
+        for(i=1;i<6;i++){
+
+
+            for(p=6;p>i;p--){
+                System.out.print(" ");
+            }
+            for(q=1;q<=i*2-1;q++){
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+    }
+}
+ **********/
+/*******************************
+
+public class test{
+    public static void main(String[] args){
+        int k=0;
+        System.out.println("200以内能被7整除但不能被4整除的数字为：");
+        for(int i=1;i<=200;i++){
+            if(i%7==0 && i%4 !=0){
+                k++;
+                System.out.print(i+"  ");
+                if(k%6==0){
+                    System.out.println();
+                }
+            }
+        }
+    }
+}
+ **************/
+/**************88
+public class test{
+    public static void main(String[] args){
+       System.out.print("输入'《空房间》'内容");
+       int a=9;
+       char c='a';
+       String b="sdfs12424df";
+        List arry=new ArrayList();
+        arry.add(b);
+
+        System.out.println(Character.isLetter(a));
+        System.out.println(Character.isLetter(c));
+        System.out.println(arry.size());
+
+    }
+}************/
+/********************输入一个数组，判断输入类型，输出数组运用foreach遍历输出数组****************8
+ public class test{
+    public static void main(String[] args){
+     //声明一个int型的数组变量
+     int [] arraynum;
+     //该变量的数组长度为5
+     arraynum=new int[5];
+    //声明和创建一起
+    System.out.print("请输入5个数字：");
+    try{
+        int [] array=new int[5];
+        for(int i=0;i<arraynum.length;i++){
+            Scanner input=new Scanner(System.in);
+            arraynum[i]=input.nextInt();
+
+         }
+         System.out.print("输出数组：");
+         for(int x:arraynum){
+            System.out.print(x);
+            System.out.print("  ");
+        }
+        int total=0;
+        for(int i=0;i<arraynum.length;i++){
+
+        total +=arraynum[i];
+    }
+    System.out.print("输出总数："+total);
+
+     }catch (Exception e){
+    System.out.print("输入内容格式不正确！");
+ }
+
+
+ }
+ }*************************/
+
+/***************************数组为函数的参数****************
+class arary{
+    public void shuzu(int[] array){
+        for(int x:array){
+            System.out.print(x);
+            System.out.print(" ");
+        }
+
+    }
+    public static int[] rshuzu(int[] array){
+        int [] result=new int[array.length];
+        for(int i=0;i<array.length;i++){
+            result[i]=array[i];
+
+        }
+        return result;
+    }
+}
+public class test{
+    public static void main(String[] args){
+        int [] a={5,6,7,8};
+        arary s=new arary();
+        System.out.println("调用函数，函数内输出：");
+        s.shuzu(a);
+        System.out.println("");
+        System.out.println("函数返回数组类型：");
+       for(int j:s.rshuzu(a)){
+           System.out.println(j);
+       }
+
+
+    }
+}*************/
+/***********************冒泡排序****************
+public class test{
+    public static void main(String[] args){
+        int[] a={56,45,23,745,123,645,37,34,54,456};
+        System.out.print("原数组的顺序为：");
+        for(int x:a){
+            System.out.print(x+"  ");
+        }
+
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a.length-1;j++){//注意j<a.length-1  因为j+1不能大于数组长度
+                if(a[j]>a[j+1]){
+                    int temp;
+                    temp=a[j+1];
+                    a[j+1]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        System.out.println();
+        System.out.print("冒泡后数组的顺序为：");
+        for(int k:a){
+            System.out.print(k+"  ");
+        }
+        System.out.println();
+
+    }
+}
+ ********/
+/***********************选择排序************
+public class test{
+    public static void main(String[] args){
+        int [] a={13,345,23,143,12,65,74,348,23};
+        System.out.println("原数组为：");
+        for(int x:a){
+            System.out.print(x+"  ");
+        }
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length-1;j++){
+                int temp;
+                if(a[j]>a[i]){
+                    temp=a[j];
+                    a[j]=a[i];
+                    a[i]=temp;
+                }
+            }
+        }
+        System.out.println();
+        System.out.println("从大到小排序：");
+        for(int x:a){
+            System.out.print(x+"  ");
+        }
+    }
+}************/
+/***************************8随机打乱并输出数组内容******************8
+public class test{
+    public static void main(String[] args){
+        char [] chs={'我','是','好','孩','子'};
+        int dex;
+        int [] a=new int[chs.length];
+        for(int i=0;i<chs.length;i++){
+            dex=(int)(Math.random()*chs.length);
+            a[i]=dex;
+        }
+        for(int j=0;j<a.length;j++){
+            int k;
+            k=a[j];
+            System.out.print(chs[k]);
+
+        }
+        System.out.println();
+    }
+}******************8**************/
+/*************************获取当前日期时间****************
+import java.util.Date;
+public class test{
+    public static void main(String[] args){
+        Date date = new Date();
+        System.out.println(date.toString());//输出当前年月日时间点  周几
+        System.out.println(date.getTime());//输出自1970年到现在的毫秒数
+        System.out.printf("%tc%n",date);
+        System.out.printf("%tF%n",date);
+        System.out.printf("%tD%n",date);
+    }
+}
+ ************/
+
+public class test{
+    public static void main(String args []){
+        char [] helloArray={'r','u','n'};
+        String []list={"ma","cao"};
+        String helloString=new String(helloArray);
+        System.out.println(helloString);
+        System.out.println(helloString.length());
+        System.out.println(helloArray);
+        System.out.println(helloArray.length);
+        List array=new ArrayList();
+        array.add(list);
+        System.out.println(array.size());
+
+    }
+}
