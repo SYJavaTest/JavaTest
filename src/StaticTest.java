@@ -1,4 +1,3 @@
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 
 /**
  * Created by uccc on 2018/4/17.

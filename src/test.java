@@ -716,7 +716,7 @@ public class test{
 }
  ************/
 
-public class test{
+/*public class test{
     public static void main(String args []){
         char [] helloArray={'r','u','n'};
         String []list={"ma","cao"};
@@ -729,5 +729,69 @@ public class test{
         array.add(list);
         System.out.println(array.size());
 
+    }
+}**/
+/**
+public class test{
+    public static void main(String[] args){
+        // 变量保存成绩
+        int score = 53;
+
+        // 变量保存加分次数
+        int count = 0;
+
+
+        //打印输出加分前成绩
+
+        System.out.println("加分前成绩："+score);
+
+        // 只要成绩小于60，就循环执行加分操作，并统计加分次数
+        while(score<60){
+            count++;
+            score++;
+
+        }
+        System.out.println("加分后成绩："+score);
+        System.out.println("共加了"+count+"次！");
+    }
+}*/
+public class test {
+
+    public static void main(String[] args) {
+
+        // 定义一个整型数组，并赋初值
+        int[] nums = new int[] { 61, 23, 4, 74, 13, 148, 20 };
+
+        int max = nums[0]; // 假定最大值为数组中的第一个元素
+        int min = nums[0]; // 假定最小值为数组中的第一个元素
+        double sum = 0;// 累加值
+        double avg = 0;// 平均值
+        int i;
+
+        for ( i = 0; i < nums.length; i++) { // 循环遍历数组中的元素
+            // 如果当前值大于max，则替换max的值
+            if(i+1<nums.length){
+                if(max<nums[i+1]){
+                    max=nums[i+1];
+                }
+
+
+                // 如果当前值小于min，则替换min的值
+                if(min>nums[i+1]){
+                    min=nums[i+1];
+                }
+            }
+
+            // 累加求和
+            sum+=nums[i];
+
+        }
+
+        // 求平均值
+        avg=sum/i;
+
+        System.out.println("数组中的最大值：" + max);
+        System.out.println("数组中的最小值：" + min);
+        System.out.println("数组中的平均值：" + avg);
     }
 }
